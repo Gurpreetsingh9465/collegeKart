@@ -45,8 +45,8 @@ app.use(passport.session());
 
 app.use('/admin',userRouter);
 app.use('/', indexRouter);
-// app.listen(2000,()=>{
-//   console.log("127.0.0.1:2000")
+// app.listen(5000,()=>{
+//   console.log("127.0.0.1:5000")
 // });
 if (app.get('env') === 'development') {
     app.use(function(err, req, res, next) {
@@ -66,4 +66,8 @@ app.use(function(err, req, res, next) {
         message: err.message,
         error: {}
     });
+});
+
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });

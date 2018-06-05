@@ -17,31 +17,44 @@ router.post('/changepassword',(req,res,next)=>{
     const oldPassword = req.body.oldPassword;
     const newPassword = req.body.newPassword;
     const confirmPassword = req.body.confirmPassword;
+    var info,message;
+    info = '';
+    message = '';
     if(!confirmPassword === newPassword) {
         req.flash('danger','Password Not Matching');
         res.redirect('/admin/changepassword');
     }else {
+
         Admin.findOne({username:'administrator'},(err,user)=>{
             if(err){
-                req.flash('danger','Something Went Wrong');
+                message = "something went wront!!";
+                info = "danger";
+                req.flash(info,message);
+                res.redirect('/admin/changepassword');
+                return next();
             }else {
                 if(bcrypt.compareSync(oldPassword,user.password)){
                     user.password = user.encryptPassword(newPassword);
                     user.save((err)=>{
                         if(!err){
-                            req.flash('success','Password Changed Successfully!!');
-
+                            message = "Password Changed!!";
+                            info = "success";
+                            req.flash(info,message);
+                            res.redirect('/admin/changepassword');
+                            return next();
                         }
-                        req.flash('danger','Something Went Wrong');
-
                     });
                 }else {
-                    req.flash('danger','Old Password Is Incorrect');
+                    message = "Old Password Is Incorrect";
+                    info = "danger";
+                    req.flash(info,message);
+                    res.redirect('/admin/changepassword');
+                    return next();
                 }
             }
         });
+
     }
-    return res.redirect('/admin/changepassword');
 
 });
 router.get('/changepassword',(req,res)=>{
