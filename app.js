@@ -1,0 +1,50 @@
+
+const express = require('express');
+const path = require('path');
+const mongoose = require('mongoose');
+const indexRouter = require('./routes/index');
+const userRouter = require('./routes/user');
+var flash = require("connect-flash");
+const cookieParser = require('cookie-parser');
+const app = express();
+const bodyParser = require('body-parser');
+const session = require('express-session');
+const mongoStore = require('connect-mongo')(session);
+const passport = require("passport");
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
+mongoose.connect('mongodb://gurpreet:qwerty123@ds147180.mlab.com:47180/collegekart');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(cookieParser());
+
+require('./config/passport');
+app.use(session({
+    secret:"nansjnsjbdhe#$$%4bhbr27@###4",
+    resave:false,
+    saveUninitialized: false,
+    store: new mongoStore({
+        mongooseConnection: mongoose.connection
+    }),
+    cookie:{maxAge: 180*60*1000}
+
+}));
+app.use((req,res,next)=>{
+    res.locals.title = "Admin-Panel";
+    res.locals.login = req.isAuthenticated();
+    res.locals.session = req.session
+    next();
+});
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+
+app.use('/admin',userRouter);
+app.use('/', indexRouter);
+app.listen(2000,()=>{
+  console.log("127.0.0.1:2000")
+});
