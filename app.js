@@ -45,6 +45,25 @@ app.use(passport.session());
 
 app.use('/admin',userRouter);
 app.use('/', indexRouter);
-app.listen(2000,()=>{
-  console.log("127.0.0.1:2000")
+// app.listen(2000,()=>{
+//   console.log("127.0.0.1:2000")
+// });
+if (app.get('env') === 'development') {
+    app.use(function(err, req, res, next) {
+        res.status(err.status || 500);
+        res.render('error', {
+            message: err.message,
+            error: err
+        });
+    });
+}
+
+// production error handler
+// no stacktraces leaked to user
+app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+        message: err.message,
+        error: {}
+    });
 });

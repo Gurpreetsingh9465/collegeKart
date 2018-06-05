@@ -5,13 +5,9 @@ const Admin = require('../models/admin');
 const passport = require('passport');
 const bcrypt = require('bcrypt-nodejs');
 
-router.get('/', (req, res)=> {
-    var suc = req.flash('success');
-    var dan = req.flash('danger');
-    res.render('index',{danger:dan,success:suc});
-});
 router.get('/login',(req,res)=>{
-    res.render('login',{danger:req.flash('error')});
+    
+    res.render('login',{danger:req.flash('danger')});
 });
 router.post('/login',passport.authenticate('local.signin',{
     successRedirect: '/',
