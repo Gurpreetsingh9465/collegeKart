@@ -5,6 +5,24 @@ const Admin = require('../models/admin');
 const passport = require('passport');
 const bcrypt = require('bcrypt-nodejs');
 
+isLoggedIn = (req,res,next)=>{
+    if(req.isAuthenticated()){
+        return next()
+    }
+    return res.redirect('/admin/login');
+};
+router.get('/logout',isLoggedIn,(req,res)=>{
+    req.logout();
+    return res.redirect('/admin/login');
+});
+router.use('/',(req,res,next)=>{
+    if(!req.isAuthenticated()){
+        return next();
+    }res.redirect('/')
+});
+router.get('/changepassword',(req,res)=>{
+    res.render('change_password',{danger:req.flash('danger')[0],success:req.flash('success')[0]});
+});
 router.get('/login',(req,res)=>{
     res.render('login',{danger:req.flash('error')[0]});
 });
@@ -24,14 +42,12 @@ router.post('/changepassword',(req,res,next)=>{
         req.flash('danger','Password Not Matching');
         res.redirect('/admin/changepassword');
     }else {
-
         Admin.findOne({username:'administrator'},(err,user)=>{
             if(err){
                 message = "something went wront!!";
                 info = "danger";
                 req.flash(info,message);
                 res.redirect('/admin/changepassword');
-                return next();
             }else {
                 if(bcrypt.compareSync(oldPassword,user.password)){
                     user.password = user.encryptPassword(newPassword);
@@ -41,7 +57,11 @@ router.post('/changepassword',(req,res,next)=>{
                             info = "success";
                             req.flash(info,message);
                             res.redirect('/admin/changepassword');
-                            return next();
+                        }else {
+                            message = "Something Went Wrong";
+                            info = "danger";
+                            req.flash(info,message);
+                            res.redirect('/admin/changepassword');
                         }
                     });
                 }else {
@@ -49,7 +69,6 @@ router.post('/changepassword',(req,res,next)=>{
                     info = "danger";
                     req.flash(info,message);
                     res.redirect('/admin/changepassword');
-                    return next();
                 }
             }
         });
@@ -57,17 +76,7 @@ router.post('/changepassword',(req,res,next)=>{
     }
 
 });
-router.get('/changepassword',(req,res)=>{
-    res.render('change_password',{danger:req.flash('danger'),success:req.flash('success')});
-});
-router.get('/logout',isLoggedIn,(req,res)=>{
-    req.logout();
-    res.redirect('/');
-});
-isLoggedIn = (req,res,next)=>{
-    if(req.isAuthenticated()){
-        return next()
-    }
-    return res.redirect('/admin/login');
-};
+
+
+
 module.exports = router;

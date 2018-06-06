@@ -1,4 +1,3 @@
-
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -19,7 +18,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(cookieParser());
 
-require('./config/passport');
+require('./config/passport')
+
 app.use(session({
     secret:"nansjnsjbdhe#$$%4bhbr27@###4",
     resave:false,
@@ -30,17 +30,17 @@ app.use(session({
     cookie:{maxAge: 180*60*1000}
 
 }));
+
+app.use(flash());
+app.use(passport.initialize())
+app.use(passport.session())
+
+app.use(express.static(path.join(__dirname, 'public')));
 app.use((req,res,next)=>{
     res.locals.title = "Admin-Panel";
     res.locals.login = req.isAuthenticated();
-    res.locals.session = req.session
     next();
 });
-app.use(flash());
-app.use(passport.initialize());
-app.use(passport.session());
-
-
 
 
 app.use('/admin',userRouter);

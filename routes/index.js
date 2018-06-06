@@ -1,17 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const Product = require('../models/Products')
+const Product = require('../models/Products');
 
-isLoggedIn = (req,res,next)=>{
+router.use((req,res,next)=>{
     if(req.isAuthenticated()){
         return next()
     }
+    req.flash('danger','You Need To Log In');
     return res.redirect('/admin/login');
-};
-
-router.use((req,res,next)=>{
-    isLoggedIn(req,res,next);
-    next();
 });
 router.get('/products',(req,res)=>{
     res.send("Under Construction! not done yet");
@@ -23,7 +19,7 @@ router.get('/',(req,res)=> {
     res.render('index');
 });
 router.get('/addnew',(req,res)=>{
-   res.render('advanceaddnew',{danger:req.flash('danger'),success:req.flash('success')});
+   res.render('advanceaddnew',{danger:req.flash('danger')[0],success:req.flash('success')[0]});
 });
 router.post('/addnew',(req,res,next)=>{
    var product = new Product ({
