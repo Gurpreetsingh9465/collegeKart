@@ -2,169 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba370740-e7dc-41e4-a2d2-4be8cdd34fbb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/models/review.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/flushwritable/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/flushwritable/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/flushwritable/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/flushwritable/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/flushwritable/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/flushwritable/lib/FlushWritable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/flushwritable/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/flushwritable/test/FlushWritable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/fs/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/fs/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/.idea/gridfs-stream.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/.idea/libraries/gridfs_stream_node_modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/.idea/scopes/scope_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/History.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/lib/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/lib/readstream.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/lib/writestream.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/test/fixtures/emptydoc.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/test/fixtures/mongo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/test/fixtures/text.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs-stream/test/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs/examples/example.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs/examples/example.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs/examples/out.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs/history.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs/test/gridfs_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gridfs/test/sample.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/util.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iconic/css/material-design-iconic-font.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iconic/css/material-design-iconic-font.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-ExtraBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-ExtraLightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-SemiBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/poppins/Poppins-ThinItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/bg-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/icons/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/animate/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/animsition/css/animsition.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/animsition/css/animsition.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/animsition/js/animsition.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/animsition/js/animsition.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/tooltip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/countdowntime/countdowntime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/css-hamburgers/hamburgers.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/css-hamburgers/hamburgers.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/daterangepicker/daterangepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/daterangepicker/daterangepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/daterangepicker/moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/daterangepicker/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/jquery/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/perfect-scrollbar/perfect-scrollbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/perfect-scrollbar/perfect-scrollbar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/select2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/select2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/select2/select2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/89472f520f0c32233fd313202fec148f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/96c2f4bcc35da2dd63bc2a935867ddd9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/cb69d658ebb123d3d207a40cae5b4475" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ElaAdmin-master/form-basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/ElaAdmin-master/form-basic.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/addnew.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addnew.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/advanceaddnew.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/advanceaddnew.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -181,8 +19,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="47" selection-start-line="47" selection-end-line="49" selection-end-column="3" />
+            <state relative-caret-position="545">
+              <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -399,12 +237,12 @@
       <workItem from="1528264370781" duration="597000" />
       <workItem from="1528300600339" duration="9350000" />
       <workItem from="1528346424390" duration="4281000" />
-      <workItem from="1528362710781" duration="9138000" />
+      <workItem from="1528362710781" duration="9274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68334000" />
+    <option name="totallyTimeSpent" value="68470000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -740,8 +578,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="47" selection-start-line="47" selection-end-line="49" selection-end-column="3" />
+        <state relative-caret-position="545">
+          <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
         </state>
       </provider>
     </entry>
