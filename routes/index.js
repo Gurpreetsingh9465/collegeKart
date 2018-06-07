@@ -1,14 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const Product = require('../models/Products');
-
-router.use((req,res,next)=>{
-    if(req.isAuthenticated()){
-        return next()
-    }
-    req.flash('danger','You Need To Log In');
-    return res.redirect('/admin/login');
-});
+const multer = require('multer');
+var fs = require('fs');
+var upload = multer({ dest: 'uploads/' })
 router.get('/products',(req,res)=>{
     res.send("Under Construction! not done yet");
 });
@@ -21,7 +16,8 @@ router.get('/',(req,res)=> {
 router.get('/addnew',(req,res)=>{
    res.render('advanceaddnew',{danger:req.flash('danger')[0],success:req.flash('success')[0]});
 });
-router.post('/addnew',(req,res,next)=>{
+router.post('/addnew', upload.single('image'),(req,res,next)=>{
+    console.log(req.file);
    var product = new Product ({
        title: req.body.title.toLowerCase(),
        content: req.body.content,
@@ -29,22 +25,26 @@ router.post('/addnew',(req,res,next)=>{
        originalPrice:req.body.originalPrice,
        discountedPrice:req.body.discountedPrice
    });
+   product.img.data = fs.readFileSync(req.file.path);
+   product.contentType = 'image/png';
    var info,message;
    product.save((err)=>{
        if(!err){
            info = 'success';
            message = "Successfully Added";
            req.flash(info,message);
+           res.redirect('/addnew');
        }else {
            info = 'danger';
-           message = err.toString();
+           message = err.toString();//development
+           // message = "Invalid Credentials";//production
            req.flash(info,message);
+           res.redirect('/addnew');
        }
    });
-    return next(res.redirect('/addnew'));
+
 
 
 
 });
-
 module.exports = router;

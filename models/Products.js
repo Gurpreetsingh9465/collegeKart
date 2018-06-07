@@ -21,7 +21,22 @@ const productSchema = mongoose.Schema({
     discountedPrice: {
         type: Number,
         required: true
+    },
+    review:{
+        type:Number,
+        default: 0,
+        required:true
+    },
+    comments: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Review"
     }
-});
+    ],
+        img: { data: Buffer, contentType: String }
+},
+    {
+        timestamps: true
+    }
+    );
 
 module.exports = mongoose.model('Product',productSchema);
