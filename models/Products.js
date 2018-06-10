@@ -32,6 +32,10 @@ const productSchema = mongoose.Schema({
         ref: "Review"
     }
     ],
+    available:{
+        type:Boolean,
+        default:true
+    },
         img: { data: Buffer, contentType: String }
 },
     {

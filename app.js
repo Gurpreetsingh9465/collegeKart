@@ -13,7 +13,8 @@ const passport = require("passport");
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
-mongoose.connect('mongodb://gurpreet:qwerty123@ds147180.mlab.com:47180/collegekart');
+mongoose.connect("mongodb://localhost/collegeKart");
+//mongoose.connect('mongodb://gurpreet:qwerty123@ds147180.mlab.com:47180/collegekart');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(cookieParser());
@@ -45,29 +46,29 @@ app.use((req,res,next)=>{
 
 app.use('/admin',userRouter);
 app.use('/', indexRouter);
-// app.listen(2000,()=>{
-//   console.log("127.0.0.1:2000")
+app.listen(2000,()=>{
+  console.log("127.0.0.1:2000")
+});
+// if (app.get('env') === 'development') {
+//     app.use(function(err, req, res, next) {
+//         res.status(err.status || 500);
+//         res.render('error', {
+//             message: err.message,
+//             error: err
+//         });
+//     });
+// }
+//
+// // production error handler
+// // no stacktraces leaked to user
+// app.use(function(err, req, res, next) {
+//     res.status(err.status || 500);
+//     res.render('error', {
+//         message: err.message,
+//         error: {}
+//     });
 // });
-if (app.get('env') === 'development') {
-    app.use(function(err, req, res, next) {
-        res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: err
-        });
-    });
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: {}
-    });
-});
-
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
+//
+// app.listen(process.env.PORT || 3000, function(){
+//     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+// });
