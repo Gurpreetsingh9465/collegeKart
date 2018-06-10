@@ -46,8 +46,25 @@ router.get('/orders',(req,res)=>{
     var lim = 10;
     var noMatch = null;
     if(req.query.search){
-        const regex = new RegExp(escapeRegex(req.query.search), 'gi');
-        Order.find({name:regex}).select({user:0,updatedAt:0,'cart.items':0}).sort({'createdAt':-1}).limit(lim).exec((err,orders)=>{
+        console.log("search");
+        var re = req.query.search;
+        console.log(req.query.search);
+        const regex = new RegExp(escapeRegex(re), 'gi');
+        Order.aggregate([
+            {
+                $match:{name:regex}
+            },
+            {
+                $project:{
+                    user:0,updatedAt:0,'cart.items':0
+                }
+            },
+            {
+                $sort :{
+                    createdAt:-1
+                }
+            },
+        ]).exec((err,orders)=>{
             if (err){
                 console.log(err);
             } else {
@@ -58,18 +75,10 @@ router.get('/orders',(req,res)=>{
             }
         });
     } else if(req.query.data){
-        var re;
-        if (req.query.search === "" || req.query.search == null){
-            re = "";
-        } else{
-            re = req.query.search;
-        }
-        console.log(req.query.search);
-        const regex = new RegExp(escapeRegex(re), 'gi');
-        lim = parseInt(req.query.data);
+        lim = req.query.data;
         Order.aggregate([
             {
-              $match:{name:regex}
+              $match:{}
             },
             {
                 $project:{
@@ -95,6 +104,7 @@ router.get('/orders',(req,res)=>{
             }
         });
     } else {
+        console.log('ordinary');
         Order.find({}).select({user:0,updatedAt:0,'cart.items':0}).sort({'createdAt':-1}).limit(lim).exec((err,orders)=>{
             if (err){
                 console.log(err);

@@ -6,31 +6,30 @@ var table = $('#loadingtable');
 var search = $('#search');
 var searchForm = $('#searchform');
 var alertBox = $('#alertBox');
-var c = "";
-search.keyup(function () {
-    c = search.val();
-    console.log(c);
-});
 
 
 $(function () {
     button.click((function () {
+        console.log(search.val());
         button.css('display','none');
         circle.css('display','');
         data += 10;
+        console.log("previous"+data);
         $.ajax({
             url:"/orders",
             type:'GET',
             contentType: "application/json",
-            data:{'data':data,
-                'search':c
+            data:{'data':data
             },
             success: function (response) {
                 button.css('display','');
                 circle.css('display','none');
                 if (response.orders.length < 1){
-                    data -= 10;
                     button.text("No More Results To Show");
+                }
+                if (response.orders.length <10){
+                    data -= 10;
+                    data += response.orders.length;
                 }
                 for(order of response.orders){
                     var form = "";
@@ -47,12 +46,14 @@ $(function () {
                         '<td>' +  order.postalCode +'</td>'+
                         '<td>' +  order.cart.totalQty+'</td>'+
                         '<td>' +  order.cart.totalPrice +'</td>'+
-                        '<td>' + order.createdAt  +'</td>'+
+                        '<td>' + new Date(order.createdAt).toString()  +'</td>'+
                         form+
                         moreInfo+
                         '</tr>'
                 );
+
                 }
+                console.log(data);
             }
         });
     }))
@@ -63,19 +64,14 @@ $(document).ready(function () {
        event.preventDefault();
        console.log("down ajax is working");
        upcircle.css('display','');
-       data = 10;
-       if (1){
-           button.text('Show More');
+       if (search.val() !== ''){
+           button.text('All Results Are Shown');
+           button.css('display','none');
            var x;
-           if (search.val() === ""){
-               x = {
-                   'data':data
-               }
-           } else {
-               x = {
-                   search: c
-               }
+           x = {
+               'search':search.val()
            }
+           console.log("previous"+data);
            $.ajax({
                url: "/orders",
                type: 'GET',
@@ -91,8 +87,7 @@ $(document).ready(function () {
                    upcircle.css('display','none');
                    for(order of response.orders){
                        var form = "";
-                       var moreInfo = "";
-                       if(order.status === 'pending'){
+                       if (order.status === 'pending') {
                            form = "<td><span class=\"badge-danger badge\" >" +order.status+"</span></td>"
                        }else {
                            form = "<td><span class=\"badge-success badge\" >" +order.status+"</span></td>"
@@ -104,7 +99,7 @@ $(document).ready(function () {
                            '<td>' +  order.postalCode +'</td>'+
                            '<td>' +  order.cart.totalQty+'</td>'+
                            '<td>' +  order.cart.totalPrice +'</td>'+
-                           '<td>' + order.createdAt  +'</td>'+
+                           '<td>' + new Date(order.createdAt).toString()  +'</td>'+
                            form+
                            moreInfo+
                            '</tr>'
